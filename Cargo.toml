@@ -8,3 +8,9 @@ description = 'Open source Google Classroom wannabe'
 
 readme = "README.md"
 license-file = "LICENCE"
+
+[dependencies]
+env_logger = "0.8"
+tera = "1.0"
+actix-http = "2"
+actix-web = "3"
