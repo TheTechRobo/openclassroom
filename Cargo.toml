@@ -1,0 +1,10 @@
+[package]
+name = "opengc" # the name of the package
+version = "0.1.0"    # the current version, obeying semver
+
+edition = '2018'
+
+description = 'Open source Google Classroom wannabe'
+
+readme = "README.md"
+license-file = "LICENCE"
