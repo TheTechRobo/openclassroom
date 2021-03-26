@@ -29,7 +29,7 @@ body {
   border-bottom: solid;
   border-width: 2px;
   display: block;
-  max-width: 250px; /*so that it is 300px unless it has to be less (max)*/
+  max-width: 320px; /*so that it is 300px unless it has to be less (max)*/
   border-color:  #00CD00;
   margin-left: 5px;
 }
