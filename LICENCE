@@ -1,4 +1,4 @@
-openclassroom is free software, you can redistribute it and/or modify
+openclassroom Base is free software, you can redistribute it and/or modify
 it under the terms of GNU Affero General Public License
 as published by the Free Software Foundation, either version 3
 of the License, or (at your option) any later version.
@@ -15,3 +15,5 @@ combining it with other code, such other code is not for that reason
 alone subject to any of the requirements of the GNU Affero GPL
 version 3.
 
+openclassroom HTML is licenced under the DBAD-CLEAN Licence, version 2.0.1.
+You can find it https://github.com/TheTechRobo/dbad-clean/blob/87e316aee69ab5ac33336c5fffc4f187240e38f7/LICENSE.md
