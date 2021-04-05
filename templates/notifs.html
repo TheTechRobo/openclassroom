@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <title>PLACEHOLDER</title>
-<link rel="stylesheet" type="text/css" href="1resources/main.css">
-<link rel="stylesheet" type="text/css" href="1resources/generalMenuBar.css">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='1resources/main.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='1resources/generalMenuBar.css') }}">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!--MenuIcon-->
-<link rel="shortcut icon" href="../1mainResources/trmicon3circle.png">
 <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Helps with mobile compatibility-->
-<script src="1resources/mobileMenu.js"></script>
+<script src="{{ url_for('static',filename='1resources/mobileMenu.js') }}"></script>
 
 
 <!--Menu bar-->
-<div id="generalNavBar" class="menuBar"><script src="generalNavBar.js"></script><noscript style="color: #FFFFFF">you seem to have javascript disabled, so the here are the links: <a href="generalNavBar.html">here</a></noscript></div>
+{% include "generalNavBar.html" %}<noscript style="color: #FFFFFF">you seem to have javascript disabled, so the here are the links: <a href="generalNavBar.html">here</a></noscript></div>
 
 
 <!--Content for the page-->
@@ -20,9 +19,5 @@
     <p class="miniTitle">you have X upcoming assignments:</p>
     <p class="bodyText">- Hi<br>- Hi</p>
 
-
-      <!--<ul class="linkList">
-        <li><a href="" class="linkList" target="_blank"></a></li>
-      </ul>       HIDDEN SO THAT I DONT LOSE THIS CODE, USEFUL TO CREATE LINK LISTS-->
   </div>
 </div>
