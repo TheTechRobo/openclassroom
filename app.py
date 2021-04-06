@@ -9,10 +9,9 @@ style_used = "style.css"
 def welcome():
     return render_template('notifs.html')
 
-@app.route("/asdfghjkl;èà")
-def idek():
-    with open("templates/nav.html","w") as nav:
-        nav.write(nav_values.chimpanzee)
+@app.route("/NavBar")
+def nav():
+    return render_template("generalNavBar.html")
 
 @app.after_request
 def add_header(r):#https://stackoverflow.com/questions/34066804/disabling-caching-in-flask
