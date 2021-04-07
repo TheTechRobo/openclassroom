@@ -3,8 +3,14 @@ name = "openclassroom"
 version = "0.1.0"
 authors = ["TheTechRobo <52163910+TheTechRobo@users.noreply.github.com>"]
 edition = "2018"
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+readme = "README.md"	
+license-file = "LICENCE"	
 
 [dependencies]
+env_logger = "0.8"
+tera = "1.0"
+actix-http = "2"
+actix-web = "3"
 
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
