@@ -1,16 +1,10 @@
 [package]
-name = "opengc" # the name of the package
-version = "0.1.0"    # the current version, obeying semver
+name = "openclassroom"
+version = "0.1.0"
+authors = ["TheTechRobo <52163910+TheTechRobo@users.noreply.github.com>"]
+edition = "2018"
 
-edition = '2018'
-
-description = 'Open source Google Classroom wannabe'
-
-readme = "README.md"
-license-file = "LICENCE"
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-env_logger = "0.8"
-tera = "1.0"
-actix-http = "2"
-actix-web = "3"
+
