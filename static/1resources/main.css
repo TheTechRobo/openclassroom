@@ -8,20 +8,22 @@ body {
   font-family:"Comic Neue","Ubuntu Light","Ubuntu",arial;
 }
 
-#classbutton, #classbuttonDark {
+.classbutton, .classbuttonDark {
     max-width:250px;
+    min-width:200px;
     max-height:250px;
     border:1px solid transparent;
-    background-color:#FFFFFF;
+    background-color:lightgrey;
     cursor:pointer;
     padding:10px;
     float:left;
+    margin:15px;
 }
 
-#classbuttonDark {
+.classbuttonDark {
     background-color:#111111;
 }
-#classbutton:hover,#classbuttonDark:hover {
+.classbutton:hover,.classbuttonDark:hover {
     box-shadow:1px 1px 10px 5px #444443;
 }
 /*Page stuff*/
