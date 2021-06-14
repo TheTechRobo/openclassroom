@@ -18,7 +18,7 @@ body {
     padding:10px;
     float:left;
     margin:15px;
-    border-radius:3px;
+    border-radius:4px;
 }
 
 .classbuttonDark {
@@ -26,7 +26,7 @@ body {
 }
 .classbutton:hover,.classbuttonDark:hover {
     box-shadow:1px 1px 10px 5px #444443;
-    border-radius:4px;
+    border-radius:5px;
 }
 /*Page stuff*/
 h1,.darkH1 {
