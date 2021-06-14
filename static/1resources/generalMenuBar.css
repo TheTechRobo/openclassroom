@@ -11,7 +11,7 @@ body {
   z-index: 50;
   border-radius: 0px 0px 15px 15px;
   overflow: hidden; /*Needed so that the additional text on menu bar (when screen is too small, mobile) gets shoved away*/
-  /*REMOVE FOR NON-CENTERED THEME*/text-align: center; /*If I want to align it center*/
+  /*REMOVE FOR NON-CENTERED THEME*/ text-align:center; /*If I want to align it center*/
 }
 
 .menuBar a {
@@ -20,8 +20,11 @@ body {
   font-size: 18px;
   display: inline-block;
   text-decoration: none;
-  transition: all 0.1s ease;
+  transition: all 0.5s ease;
   border-radius: 20px;
+  justify:center;
+  text-align:center;
+  justify-content:center;
 }
 
 .menuBar a:hover {
