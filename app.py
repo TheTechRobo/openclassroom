@@ -13,6 +13,10 @@ def welcome():
 def nav():
     return render_template("generalNavBar.html")
 
+@app.route("/notifs")
+def notifications():
+    return render_template("notifs.html")
+
 @app.after_request
 def add_header(r):#https://stackoverflow.com/questions/34066804/disabling-caching-in-flask
     """
