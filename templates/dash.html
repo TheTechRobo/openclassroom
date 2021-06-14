@@ -11,12 +11,27 @@
 {% include "generalNavBar.html" %}
 
 <!--Content for the page-->
-<div class="fullPage">
+{% if mode == "light" %}
+<div class="fullPageLight">
+<style>body { background-color:white;}</style>
+{% elif mode == "dark" %}
+<div class="fullPageDark">
+{% else %}
+Settings corrupt!
+{% endif %}
   <div class="mainText">
     <h1>welcome to openclassroom</h1>
     <h2>Pinned</h2>
-    <p ><div class="classbutton"><h1 class="darkH1">CLASSNAME</h1><h2 class="darkH2">Joe Mama</h2><p class="darkp">jfi</p></p></div></p>
-    <div class="classbuttonDark"><h1>CLASSNAME</h1><h2>Joe Mama</h2><p>jfi</p></p></div>
+    {% if mode == "light" %}
+    {% set class = "classbutton" %}
+    {% set pclass = "darkp" %}
+    {% elif mode == "dark" %}
+    {% set class = "classbuttonDark" %}
+    {% set pclass = "" %}
+    {% else %}
+        <p>Your settings are corrupt. Contact your administrator.</p>
+    {% endif %}
+    <div class="{{ class }}"><h1>CLASSNAME</h1><h2>Joe Mama</h2><p class="{{ pclass }}">jfi</p></p></div><div style="clear:both"></div>
     <h2>you have X upcoming assignments:</h2>
     <p>THE_ASSIGNMENT_PLACEHOLDER__USE_REPLACE_FOR_THIS</p>
   </div>

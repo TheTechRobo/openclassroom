@@ -35,11 +35,15 @@ h1,.darkH1 {
   font-weight: bold;
   border-bottom: solid;
   border-width: 2px;
+  margin-left:5px;
+  margin-top:1px;
   display: block;
   max-width: 300px; /*so that it is 300px unless it has to be less (max)*/
   border-color: orange;
 }
 .darkH1 {
+    margin-top:-1px;
+    margin-left:-2px;
     color:darkorange;
     border-color:darkorange;
     max-width:250px;
@@ -51,33 +55,35 @@ h2,.darkH2 {
   border-bottom: solid;
   border-width: 2px;
   display: block;
-  max-width: 320px; /*so that it is 300px unless it has to be less (max)*/
+  max-width: 400px; /*so that it is 300px unless it has to be less (max)*/
   border-color:  #00CD00;
   margin-left: 5px;
 }
 .darkH2 {
     color:darkgreen;
     border-color:darkgreen;
-    max-width:250px;
+    max-width:400px;
 }
 p,.darkp {
   color: white;
   font-size: 18px;
-  margin-left: 12px;
+  margin-left: 15px;
   line-height: 1.4; /*To add spacing in between the lines, 1.4, so just a bit to make easier to read.*/
 }
 .darkp {
     color:black;
 }
-.fullPage {
+.fullPage,.fullPageLight {
   margin-left: 10%;
   width: 80%;
+  padding:3px;
   border-radius: 20px;
   margin-top: calc(51px + 10px); /*51 = the heigh of the menubar, other number = the amount of space between the menu bar and the content*/
   min-height: calc(100vh - 51px - 10px); /*the calc makes it as high as the viewport (window) and the -53px is so that it minuses the menubar, and the third number is minus the small gab between menubar, and text.*/
-  background: rgba(34, 34, 35, /**/.99/*THIS NUMBER CHANGES TRANSPARENCY, 1=opaque, .1=transparent*/); /*Transparency of main element (fullpage)*/
+  background: rgba(35,35,35, 0.8); /*Transparency of main element (fullpage)*/
 }
-
+.fullPageLight {
+    background: rgba(100, 100, 100, 1);
 .mainText { /*The container that all of the text is stored in, container inside the big grey box*/
   padding: 20px;
 }

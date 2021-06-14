@@ -7,12 +7,14 @@ style_used = "style.css"
 
 @app.route("/")
 def welcome():
-    return render_template('dash.html')
+    return render_template('dash.html',mode="light") #for testing
 
-@app.route("/NavBar")
+@app.route("/sitemap")
 def nav():
-    return render_template("generalNavBar.html")
-
+    return render_template("generalNavBar.html",mode="light")
+@app.route("/sitemap.xml")
+def sitemap():
+    return render_template("generalNavBar.html",mode="light")
 @app.route("/notifs")
 def notifications():
     return render_template("notifs.html")
