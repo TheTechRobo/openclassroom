@@ -7,7 +7,7 @@ style_used = "style.css"
 
 @app.route("/")
 def welcome():
-    return render_template('notifs.html')
+    return render_template('dash.html')
 
 @app.route("/NavBar")
 def nav():

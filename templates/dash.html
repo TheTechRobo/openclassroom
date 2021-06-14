@@ -1,23 +1,22 @@
 <!DOCTYPE html>
 <title>PLACEHOLDER</title>
+<link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300&display=swap" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='1resources/main.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='1resources/generalMenuBar.css') }}">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!--MenuIcon-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Helps with mobile compatibility-->
-<script src="{{ url_for('static',filename='1resources/mobileMenu.js') }}"></script>
-
+<script src="{{ url_for('static',filename='1resources/mobileMenu.js') }}"></script> <!--todo: use css-->
 
 <!--Menu bar-->
-{% include "generalNavBar.html" %}<noscript style="color: #FFFFFF">you seem to have javascript disabled, so the here are the links: <a href="generalNavBar.html">here</a></noscript></div>
-
+{% include "generalNavBar.html" %}
 
 <!--Content for the page-->
 <div class="fullPage">
   <div class="mainText">
     <p class="Title">welcome to openclassroom</p>
-    <p class="bodyText">This is the placeholder for the dashboard welcome text! Lorem ipsum dolor sat idshf sdfhiuhiu dhediuehwfui f.</p>
+    <p class="miniTitle">Pinned</p>
+    <p class="bodyText"><button id="classbutton">hi</button></p>
     <p class="miniTitle">you have X upcoming assignments:</p>
-    <p class="bodyText">- Hi<br>- Hi</p>
-
+    <p class="bodyText">THE_ASSIGNMENT_PLACEHOLDER__USE_REPLACE_FOR_THIS</p>
   </div>
 </div>

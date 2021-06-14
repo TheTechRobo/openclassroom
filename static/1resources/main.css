@@ -2,14 +2,26 @@
 
 /*Document Settings and such*/
 body {
-  background-color: #111;
-  background-image: url("bgtech2.jpg");
+  background-color: #000000;
   background-position: center;
   background-attachment: fixed;
-  font-family: arial;
+  font-family:"Comic Neue","Ubuntu Light","Ubuntu",arial;
 }
 
+#classbutton, #classbuttonDark {
+    background-color:#FFFFFF;
+    cursor:pointer;
+    padding:10px;
+    font-size:12px;
+}
 
+#classbuttonDark {
+    background-color:#111111;
+}
+#classbutton:hover,#classbuttonDark:hover {
+    box-shadow:1px 1px 10px 5px #222222;
+    border-width:20px;
+}
 /*Page stuff*/
 .Title {
   color: orange;
@@ -21,7 +33,6 @@ body {
   max-width: 300px; /*so that it is 300px unless it has to be less (max)*/
   border-color: orange;
 }
-
 .miniTitle {
   color:  #00CD00;
   font-size: 20px;
