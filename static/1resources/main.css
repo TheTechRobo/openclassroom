@@ -27,7 +27,7 @@ body {
     box-shadow:1px 1px 10px 5px #444443;
 }
 /*Page stuff*/
-.Title, .TitleInButton {
+h1,.darkH1 {
   color: orange;
   font-size: 22px;
   font-weight: bold;
@@ -37,12 +37,12 @@ body {
   max-width: 300px; /*so that it is 300px unless it has to be less (max)*/
   border-color: orange;
 }
-.TitleInButton {
+.darkH1 {
     color:darkorange;
     border-color:darkorange;
     max-width:250px;
 }
-.miniTitle,.miniTitleInButton {
+h2,.darkH2 {
   color:  #00CD00;
   font-size: 20px;
   font-weight: 300;
@@ -53,18 +53,18 @@ body {
   border-color:  #00CD00;
   margin-left: 5px;
 }
-.miniTitleInButton {
+.darkH2 {
     color:darkgreen;
     border-color:darkgreen;
     max-width:250px;
 }
-.bodyText,.bodyTextInButton {
+p,.darkp {
   color: white;
   font-size: 18px;
   margin-left: 12px;
   line-height: 1.4; /*To add spacing in between the lines, 1.4, so just a bit to make easier to read.*/
 }
-.bodyTextInButton {
+.darkp {
     color:black;
 }
 .fullPage {
