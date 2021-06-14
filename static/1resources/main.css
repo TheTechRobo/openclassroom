@@ -12,15 +12,14 @@ body {
     background-color:#FFFFFF;
     cursor:pointer;
     padding:10px;
-    font-size:12px;
 }
 
 #classbuttonDark {
     background-color:#111111;
 }
 #classbutton:hover,#classbuttonDark:hover {
-    box-shadow:1px 1px 10px 5px #222222;
-    border-width:20px;
+    box-shadow:1px 1px 10px 5px #444443;
+    border:1px solid transparent;
 }
 /*Page stuff*/
 .Title {
