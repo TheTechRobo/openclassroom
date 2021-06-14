@@ -7,7 +7,7 @@ style_used = "style.css"
 
 @app.route("/")
 def welcome():
-    return render_template('dash.html',mode="light") #for testing
+    return render_template('dash.html',mode="dark") #for testing
 
 @app.route("/sitemap")
 def nav():
