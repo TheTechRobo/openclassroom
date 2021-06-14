@@ -9,6 +9,8 @@ body {
 }
 
 #classbutton, #classbuttonDark {
+    max-width:250px;
+    max-height:250px;
     border:1px solid transparent;
     background-color:#FFFFFF;
     cursor:pointer;
@@ -22,7 +24,7 @@ body {
     box-shadow:1px 1px 10px 5px #444443;
 }
 /*Page stuff*/
-.Title {
+.Title, .TitleInButton {
   color: orange;
   font-size: 22px;
   font-weight: bold;
@@ -32,7 +34,12 @@ body {
   max-width: 300px; /*so that it is 300px unless it has to be less (max)*/
   border-color: orange;
 }
-.miniTitle {
+.TitleInButton {
+    color:darkorange;
+    border-color:darkorange;
+    max-width:250px;
+}
+.miniTitle,.miniTitleInButton {
   color:  #00CD00;
   font-size: 20px;
   font-weight: 300;
@@ -43,14 +50,20 @@ body {
   border-color:  #00CD00;
   margin-left: 5px;
 }
-
-.bodyText {
+.miniTitleInButton {
+    color:darkgreen;
+    border-color:darkgreen;
+    max-width:250px;
+}
+.bodyText,.bodyTextInButton {
   color: white;
   font-size: 18px;
   margin-left: 12px;
   line-height: 1.4; /*To add spacing in between the lines, 1.4, so just a bit to make easier to read.*/
 }
-
+.bodyTextInButton {
+    color:black;
+}
 .fullPage {
   margin-left: 10%;
   width: 80%;

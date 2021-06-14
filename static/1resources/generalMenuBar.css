@@ -7,7 +7,6 @@ body {
   background-color: #111;
   width: 100%;
   position: fixed;
-  font-family: Arial;
   top: 0px;
   z-index: 50;
   border-radius: 0px 0px 15px 15px;
@@ -38,7 +37,6 @@ body {
   float: left;
   padding: 12px 25px;
   font-size: 20px;
-  font-family: arial;
 }
 
 .indexButtonBalance { /*So that there is an index button on both sides, the buttons should then be centered*/
