@@ -7,14 +7,14 @@ style_used = "style.css"
 
 @app.route("/")
 def welcome():
-    return render_template('dash.html',mode="dark",upcomingDueList=sorted({20210702:"dsdeI",20210701:"sss"}.keys(),reverse=True), pinned=[{"id":"JFJdu3","name":"hi","teach":"Joe Mama","desc":"Your Class"}, {"id":"d","name":"hi","teach":"Joe Mama","desc":"fj"}], upcomingDue={20210702:"dsdeI",20210701:"sss"}, idToName={"sss":"Sizzle","dsdeI":"random letters assignment"}) #for testing
+    return render_template('dash.html', mode="dark", upcomingDueList=sorted({20210702:"dsdeI",20210701:"sss"}.keys(),reverse=True), pinned=[{"id":"JFJdu3","name":"hi","teach":"Joe Mama","desc":"Your Class"}, {"id":"d","name":"hi","teach":"Joe Mama","desc":"fj"}], upcomingDue={20210702:"dsdeI",20210701:"sss"}, idToName={"sss":"Sizzle","dsdeI":"random letters assignment"}) #for testing
 
 @app.route("/sitemap")
 def nav():
-    return render_template("generalNavBar.html",mode="light")
+    return render_template("generalNavBar.html",mode="dark")
 @app.route("/sitemap.xml")
 def sitemap():
-    return render_template("generalNavBar.html",mode="light")
+    return render_template("generalNavBar.html",mode="dark")
 @app.route("/notifs")
 def notifications():
     return render_template("notifs.html")
