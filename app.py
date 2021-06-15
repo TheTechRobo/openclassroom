@@ -17,7 +17,8 @@ def sitemap():
     return render_template("generalNavBar.html",mode="dark")
 @app.route("/notifs")
 def notifications():
-    return render_template("notifs.html")
+    msg = [{"relativeurl":"goToNotif/hw","name":"Joe posted a new assignment: Mama","class":{"name":"d"}}, {"relativeurl":"goToNotif/hw","name":"Joe posted a new sssssssassignment: Mama","class":{"name":"CLASSNAME"}}]
+    return render_template("notifs.html", lenMsg=len(msg), msg=msg)
 
 @app.after_request
 def add_header(r):#https://stackoverflow.com/questions/34066804/disabling-caching-in-flask

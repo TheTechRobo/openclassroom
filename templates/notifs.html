@@ -11,6 +11,9 @@
 <!--Content for the page-->
 <div class="fullPage">
   <div class="mainText">
-    <h1>You have X new messages</h1>
+      <h1>You have {{ lenMsg }} new messages</h1>
+      <p>{% if lenMsg == 0 %} No notifications! Isn't it nice to be in the know?
+          {% else %} <ul>{% for i in msg %} <li><a href="{{ i['relativeurl'] }}">{{ i['name'] }} (in {{ i['class']['name'] }})</a></li>
+              {%endfor%}</ul>{%endif%}</p>
   </div>
 </div>
