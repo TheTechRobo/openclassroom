@@ -7,7 +7,7 @@ style_used = "style.css"
 
 @app.route("/")
 def welcome():
-    return render_template('dash.html',mode="dark",upcomingDueList=sorted({20210702:"dsdeI",20210701:"sss"}.keys(),reverse=True), pinned={"JFJdu3":{"name":"hi","teach":"Joe Mama","desc":"Your Class"},"d":{"name":"hi","teach":"Joe Mama","desc":"fj"}},upcomingDue={20210702:"dsdeI",20210701:"sss"}, idToName={"sss":"Sizzle","dsdeI":"random letters assignment"}) #for testing
+    return render_template('dash.html',mode="dark",upcomingDueList=sorted({20210702:"dsdeI",20210701:"sss"}.keys(),reverse=True), pinned=[{"id":"JFJdu3","name":"hi","teach":"Joe Mama","desc":"Your Class"}, {"id":"d","name":"hi","teach":"Joe Mama","desc":"fj"}], upcomingDue={20210702:"dsdeI",20210701:"sss"}, idToName={"sss":"Sizzle","dsdeI":"random letters assignment"}) #for testing
 
 @app.route("/sitemap")
 def nav():

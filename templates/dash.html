@@ -33,8 +33,9 @@ Settings corrupt!
         <p>Your settings are corrupt. Contact your administrator.</p>
     {% endif %}
     {% for i in pinned %}
-    <div class="{{ class }}"><h1>{{ i['name'] }}</h1><h2>{{ i['teach'] }}</h2><p class="{{ pclass }}">{{ i['desc'] }}</p></p></div><div style="clear:both"></div>
+    <a href="{{ i['id'] }}"><div class="{{ class }}"><h1>{{ i['name'] }}</h1><h2>{{ i['teach'] }}</h2><p class="{{ pclass }}">{{ i['desc'] }}</div></a>
     {%endfor%}
+    <div style="clear:both;"></div>
     <h2>upcoming assignments:</h2>
     <p><ul>
             {% for i in upcomingDueList %}
