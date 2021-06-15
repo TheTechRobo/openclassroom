@@ -88,21 +88,21 @@ p,.darkp {
   padding: 20px;
 }
 
-.linkList { /*List of websites*/
+.linkList, li a { /*List of websites*/
   text-decoration: underline;
   max-width: 400px;
   color: #5f88e1;
   list-style-type: none;
 }
 
-.linkList li a {
+li a {
   display: block;
   padding: 6px;
   margin-top:2px;
   font-size: 18px
 }
 
-.linkList li a:hover {
+li a:hover {
   transition: all .2s;
   color: orange;
   background-color: #111;
@@ -156,7 +156,7 @@ th, td {
   .linkList { /*List of websites*/
     padding-left: 12px;
   }
-  .linkList li a {
+  li a {
     padding: 4px;
   }
   .charImages {
