@@ -1,4 +1,4 @@
-# openclassroom
+# openclassroom ![](https://img.shields.io/github/commit-activity/w/TheTechRobo/openclassroom)
 Open the classroom, we said. Stop having it be closed.
 
 
