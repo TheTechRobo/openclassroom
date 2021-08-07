@@ -1,0 +1,12 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Support
+    url: https://github.com/TheTechRobo/openclassroom/discussions
+    about: Ask the community for support
+  - name: Get help on Discord
+    url: https://discord.gg/KhuTeHbkye
+    about: Have a quick question? Join the Discord server and ask on the appropriate channel.
+  - name: Where did these issue templates come from?
+    url: https://github.com/ohmyzsh/ohmyzsh/tree/master/.github/ISSUE_TEMPLATE
+    name: I may or may not have nicked them from OhMyZsh...
+
