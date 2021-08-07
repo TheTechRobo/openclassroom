@@ -32,7 +32,9 @@ Settings corrupt!
         <p>Your settings are corrupt. Contact your administrator.</p>
     {% endif %}
     {% for i in pinned %}
-    <a href="{{ i['id'] }}"><div class="{{ class }}"><h1>{{ i['name'] }}</h1><h2>{{ i['teach'] }}</h2><p class="{{ pclass }}">{{ i['desc'] }}</div></a>
+    <a href="{{ i['id'] }}"><div class="{{ class }}"><form action="DismissPin/{{ i['id'] }}" target="_blank"><button class="dismissPin">-</button></form><h1>{{ i['name'] }}</h1><h2>{{ i['teach'] }}</h2><p class="{{ pclass }}">{{ i['desc'] }}</div></a>
+    {% else %}
+    <p>You have no pinned classes.</p>
     {%endfor%}
     <div style="clear:both;"></div>
     <h2>upcoming assignments:</h2>

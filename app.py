@@ -1,5 +1,5 @@
 #THIS FILE IS TEMPORARY
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, abort
 
 app = Flask(__name__)
 
@@ -19,7 +19,10 @@ def sitemap():
 def notifications():
     msg = [{"relativeurl":"goToNotif/hw","name":"Joe posted a new assignment: Mama","class":{"name":"d"}}, {"relativeurl":"goToNotif/hw","name":"Joe posted a new sssssssassignment: Mama","class":{"name":"CLASSNAME"}}]
     return render_template("notifs.html", lenMsg=len(msg), msg=msg)
-
+@app.route("/DismissPin/<id>")
+def dismiss(id):
+    print(f"Failed to dismiss {id}...")
+    abort(418)
 @app.after_request
 def add_header(r):#https://stackoverflow.com/questions/34066804/disabling-caching-in-flask
     """

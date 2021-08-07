@@ -2,12 +2,33 @@
 
 /*Document Settings and such*/
 body {
-  background-color: #000000;
+  background-color: #3B3B3B;
   background-position: center;
   background-attachment: fixed;
   font-family:"Comic Neue","Ubuntu Light","Ubuntu",arial;
 }
-
+button {
+	background-color: #FF0000;
+}
+.dismissPin {
+	/*
+	 * https://stackoverflow.com/a/12365963/9654083
+	 * https://www.codesd.com/item/put-the-button-in-the-upper-right-corner-inside-the-div-box.html
+	 */
+	font-size: 13px;
+	padding: 5px;
+	position:absolute; top:3px; right:2px;
+	padding-top: 0px;
+	padding-bottom:0px;
+	border:none;
+	display: inline-block;
+}
+.dismissPin:active {
+	background-color: darkred;
+	/*padding-top:0.5px;
+	* padding-bottom:0.5px;
+	*/
+}
 .classbutton, .classbuttonDark {
     max-width:250px;
     min-width:200px;
@@ -16,6 +37,7 @@ body {
     background-color:lightgrey;
     cursor:pointer;
     padding:10px;
+    position:relative;
     float:left;
     margin:15px;
     border-radius:4px;
@@ -65,7 +87,7 @@ h2,.darkH2 {
     max-width:400px;
 }
 p,.darkp {
-  color: white;
+  color: #ECE7FF;
   font-size: 18px;
   margin-left: 15px;
   line-height: 1.4; /*To add spacing in between the lines, 1.4, so just a bit to make easier to read.*/
