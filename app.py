@@ -1,14 +1,25 @@
-#THIS FILE IS TEMPORARY
-from flask import Flask, render_template, request, abort
-
+from flask import *
+from rethinkdb import r
+r.set_loop_type('asyncio')
 app = Flask(__name__)
 
 style_used = "style.css"
 
 @app.route("/")
 async def welcome():
-    return render_template('dash.html', mode="dark", upcomingDueList=sorted({20210702:"dsdeI",20210701:"sss"}.keys(),reverse=True), pinned=[{"id":"JFJdu3","name":"hi","teach":"Joe Mama","desc":"Your Class"}, {"id":"d","name":"hi","teach":"Joe Mama","desc":"fj"}], upcomingDue={20210702:"dsdeI",20210701:"sss"}, idToName={"sss":"Sizzle","dsdeI":"random letters assignment"}) #for testing
-
+    conn = await r.connect("localhost", 28015)
+    user = "test_openclassroom_user" #in the future, make this a session id with cookies
+    userSettings = await r.db("openclassroom").table("userSettings").filter(r.row["user_stuff"] == user).run(conn)
+    async for i in userSettings:
+        userSettings = i
+    datums = {
+        "mode": userSettings['mode'],
+        "upcomingDueList": sorted({20210702: "dsdeI", 20210701: "sss"}.keys(), reverse=True),
+        "pinned": [{"id": "JFJdu3", "name": "hi", "teach": "Joe Mama", "desc": "Your Class"}, {"id": "d", "name": "hi", "teach": "Joe Mama", "desc": "fj"}],
+        "upcomingDue": {20210702: "dsdeI", 20210701: "sss"},
+        "idToName": {"sss": "Sizzle", "dsdeI": "random letters assignment"}
+        }
+    return render_template('dash.html', **datums)
 @app.route("/sitemap")
 async def nav():
     return render_template("generalNavBar.html",mode="dark")
