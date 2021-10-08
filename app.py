@@ -6,21 +6,21 @@ app = Flask(__name__)
 style_used = "style.css"
 
 @app.route("/")
-def welcome():
+async def welcome():
     return render_template('dash.html', mode="dark", upcomingDueList=sorted({20210702:"dsdeI",20210701:"sss"}.keys(),reverse=True), pinned=[{"id":"JFJdu3","name":"hi","teach":"Joe Mama","desc":"Your Class"}, {"id":"d","name":"hi","teach":"Joe Mama","desc":"fj"}], upcomingDue={20210702:"dsdeI",20210701:"sss"}, idToName={"sss":"Sizzle","dsdeI":"random letters assignment"}) #for testing
 
 @app.route("/sitemap")
-def nav():
+async def nav():
     return render_template("generalNavBar.html",mode="dark")
 @app.route("/sitemap.xml")
-def sitemap():
+async def sitemap():
     return render_template("generalNavBar.html",mode="dark")
 @app.route("/notifs")
-def notifications():
+async def notifications():
     msg = [{"relativeurl":"goToNotif/hw","name":"Joe posted a new assignment: Mama","class":{"name":"d"}}, {"relativeurl":"goToNotif/hw","name":"Joe posted a new sssssssassignment: Mama","class":{"name":"CLASSNAME"}}]
     return render_template("notifs.html", lenMsg=len(msg), msg=msg)
 @app.route("/DismissPin/<id>")
-def dismiss(id):
+async def dismiss(id):
     print(f"Failed to dismiss {id}...")
     abort(418)
 @app.after_request
