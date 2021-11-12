@@ -9,10 +9,11 @@ style_used = "style.css"
 @app.route("/")
 async def welcome():
     conn = await r.connect("localhost", 28015)
-    user = "test_openclassroom_user" #in the future, make this a session id with cookies
+    user = "test" #in the future, make this a session id with cookies
     userSettings = await r.db("openclassroom").table("userSettings").filter(r.row["user_stuff"] == user).run(conn)
-    async for i in userSettings:
-        userSettings = i
+    async for a in userSettings:
+        userSettings = a
+    print(userSettings)
     datums = {
             "mode": userSettings['mode'],
             "upcomingDueList": sorted({20210702: "dsdeI", 20210701: "sss"}.keys(), reverse=True),
@@ -42,14 +43,17 @@ async def Setup():
 async def CreateDatabase():
     conn = await r.connect("localhost", 28015)
     try: await r.db_create("openclassroom").run(conn)
-    except:
+    except rethinkdb.errors.ReqlOpFailedError:
         #print("Except")
-        raise
         print("There is already a database named openclassroom. Remove it before rerunning setup. In the future there will be an option to change the database name.")
         return "see output", 500
     await r.db("openclassroom").table_create("userSettings").run(conn)
     await r.db("openclassroom").table_create("assignments").run(conn)
     await r.db("openclassroom").table_create("classes").run(conn)
+    await r.db("openclassroom").table("userSettings").insert(
+            {"user_stuff": "test",
+                "mode": "dark"}
+            ).run(conn)
     return "Hello World! In the future there'll be more shit to configure."
 @app.after_request
 def add_header(r):#https://stackoverflow.com/questions/34066804/disabling-caching-in-flask
@@ -62,7 +66,7 @@ def add_header(r):#https://stackoverflow.com/questions/34066804/disabling-cachin
     r.headers["Expires"] = "0"
     r.headers['Cache-Control'] = 'public, max-age=0'
     return r
-@app.errorhandler(TypeError)
+#@app.errorhandler(TypeError)
 @app.errorhandler(rethinkdb.errors.ReqlOpFailedError)
 def typeerror_handler(e):
     return "Failed to load database! Make sure you have a database called `openclassroom' in rethinkdb, and that you did not remove any key elements. If all else fails, <a href='/RerunSetup?issue=databaseInaccessible'>rerun setup</a>.", 500
