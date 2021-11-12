@@ -1,0 +1,35 @@
+2021-11-10T20:33:29.498632776 0.017412s notice: Recursively removing directory /home/thetechrobo/openclassroom/rethinkdb_data/tmp
+2021-11-10T20:33:29.510526882 0.029308s notice: Initializing directory /home/thetechrobo/openclassroom/rethinkdb_data
+2021-11-10T20:33:29.513352751 0.032131s info: Creating a default database for your convenience. (This is because you ran 'rethinkdb' without 'create', 'serve', or '--join', and the directory '/home/thetechrobo/openclassroom/rethinkdb_data' did not already exist or is empty.)
+2021-11-10T20:33:29.513368591 0.032147s notice: Running rethinkdb 2.4.1~0buster (CLANG 7.0.1 (tags/RELEASE_701/final))...
+2021-11-10T20:33:29.517982143 0.036762s notice: Running on Linux 5.10.0-0.bpo.5-amd64 x86_64
+2021-11-10T20:33:29.520874998 0.039654s notice: Loading data from directory /home/thetechrobo/openclassroom/rethinkdb_data
+2021-11-10T20:33:29.564407307 0.083187s info: Automatically using cache size of 1704 MB
+2021-11-10T20:33:29.567174266 0.085953s notice: Listening for intracluster connections on port 29015
+2021-11-10T20:33:29.603929836 0.122709s notice: Listening for client driver connections on port 28015
+2021-11-10T20:33:29.603991662 0.122770s notice: Listening for administrative HTTP connections on port 8080
+2021-11-10T20:33:29.603992994 0.122772s notice: Listening on cluster addresses: 127.0.0.1, 172.17.0.1, 192.168.250.1, 192.168.2.171, ::1, fe80::42:42ff:fe4b:301f%5, fe80::887:c3ff:fe3a:769c%7, fe80::6cfa:7cff:fe6f:635b%4, fe80::bc9b:98ff:fe0c:8a35%11, fe80::c4a7:11ff:fe03:f2ad%9, fe80::d6ed:adc4:e2a4:3470%22
+2021-11-10T20:33:29.603994116 0.122773s notice: Listening on driver addresses: 127.0.0.1, 172.17.0.1, 192.168.250.1, 192.168.2.171, ::1, fe80::42:42ff:fe4b:301f%5, fe80::887:c3ff:fe3a:769c%7, fe80::6cfa:7cff:fe6f:635b%4, fe80::bc9b:98ff:fe0c:8a35%11, fe80::c4a7:11ff:fe03:f2ad%9, fe80::d6ed:adc4:e2a4:3470%22
+2021-11-10T20:33:29.603995218 0.122774s notice: Listening on http addresses: 127.0.0.1, 172.17.0.1, 192.168.250.1, 192.168.2.171, ::1, fe80::42:42ff:fe4b:301f%5, fe80::887:c3ff:fe3a:769c%7, fe80::6cfa:7cff:fe6f:635b%4, fe80::bc9b:98ff:fe0c:8a35%11, fe80::c4a7:11ff:fe03:f2ad%9, fe80::d6ed:adc4:e2a4:3470%22
+2021-11-10T20:33:29.603996381 0.122775s notice: Server ready, "themandownstairs_n9e" 7d990677-4318-4e6b-b188-3507c8ac1dbf
+2021-11-10T20:59:29.579686943 1560.098466s warn: RethinkDB has been accessing a lot of swap memory in the past ten minutes. This may impact performace.
+2021-11-11T19:36:09.049659618 0.017995s notice: Running rethinkdb 2.4.1~0buster (CLANG 7.0.1 (tags/RELEASE_701/final))...
+2021-11-11T19:36:09.054578925 0.022914s notice: Running on Linux 5.10.0-0.bpo.5-amd64 x86_64
+2021-11-11T19:36:09.057357366 0.025691s notice: Loading data from directory /home/thetechrobo/openclassroom/rethinkdb_data
+2021-11-11T19:36:09.074389501 0.042724s info: Automatically using cache size of 2962 MB
+2021-11-11T19:36:09.077007752 0.045341s notice: Listening for intracluster connections on port 29015
+2021-11-11T19:36:09.121315163 0.089649s notice: Listening for client driver connections on port 28015
+2021-11-11T19:36:09.121346152 0.089680s notice: Listening for administrative HTTP connections on port 8080
+2021-11-11T19:36:09.121347163 0.089681s notice: Listening on cluster addresses: 127.0.0.1, 172.17.0.1, 192.168.250.1, 192.168.2.171, ::1, fe80::42:d9ff:fe21:fc54%5, fe80::30ec:6cff:feb5:2f23%3, fe80::382f:9bff:fe6a:c57e%9, fe80::4ca1:9cff:fe6d:b3da%11, fe80::d6ed:adc4:e2a4:3470%20, fe80::f876:f3ff:feb8:6b5%7
+2021-11-11T19:36:09.121348115 0.089682s notice: Listening on driver addresses: 127.0.0.1, 172.17.0.1, 192.168.250.1, 192.168.2.171, ::1, fe80::42:d9ff:fe21:fc54%5, fe80::30ec:6cff:feb5:2f23%3, fe80::382f:9bff:fe6a:c57e%9, fe80::4ca1:9cff:fe6d:b3da%11, fe80::d6ed:adc4:e2a4:3470%20, fe80::f876:f3ff:feb8:6b5%7
+2021-11-11T19:36:09.121348987 0.089683s notice: Listening on http addresses: 127.0.0.1, 172.17.0.1, 192.168.250.1, 192.168.2.171, ::1, fe80::42:d9ff:fe21:fc54%5, fe80::30ec:6cff:feb5:2f23%3, fe80::382f:9bff:fe6a:c57e%9, fe80::4ca1:9cff:fe6d:b3da%11, fe80::d6ed:adc4:e2a4:3470%20, fe80::f876:f3ff:feb8:6b5%7
+2021-11-11T19:36:09.121349849 0.089684s notice: Server ready, "themandownstairs_n9e" 7d990677-4318-4e6b-b188-3507c8ac1dbf
+2021-11-11T19:48:29.522587812 740.490922s info: Table 1a962ea9-555b-4000-83b8-9087e9c7dbd3: Starting a new Raft election for term 1.
+2021-11-11T19:48:29.523498530 740.491832s info: Table 1a962ea9-555b-4000-83b8-9087e9c7dbd3: Added replica on this server.
+2021-11-11T19:48:29.526757983 740.495092s info: Table 1a962ea9-555b-4000-83b8-9087e9c7dbd3: This server is Raft leader for term 1. Latest log index is 0.
+2021-11-11T19:48:30.062876091 741.031210s info: Table 606f90fb-b9b4-4b98-9522-d3a4b4038e2f: Added replica on this server.
+2021-11-11T19:48:30.062883395 741.031217s info: Table 606f90fb-b9b4-4b98-9522-d3a4b4038e2f: Starting a new Raft election for term 1.
+2021-11-11T19:48:30.067158854 741.035493s info: Table 606f90fb-b9b4-4b98-9522-d3a4b4038e2f: This server is Raft leader for term 1. Latest log index is 0.
+2021-11-11T19:48:30.585521350 741.553855s info: Table 22825d1b-fea3-46d8-8aa6-5b99362fd4dd: Starting a new Raft election for term 1.
+2021-11-11T19:48:30.585625585 741.553959s info: Table 22825d1b-fea3-46d8-8aa6-5b99362fd4dd: Added replica on this server.
+2021-11-11T19:48:30.588955521 741.557289s info: Table 22825d1b-fea3-46d8-8aa6-5b99362fd4dd: This server is Raft leader for term 1. Latest log index is 0.

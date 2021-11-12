@@ -1,0 +1,38 @@
+<title>openclassroom setup</title>
+<noscript>Setup requires JavaScript for initial setup. Please switch to a browser with Javascript support. <b>This will not be required once openclassroom is installed.</b></noscript>
+  <div id="main"><p>No javascript... :(</p></div>
+<script>
+  function LoadDB() {
+    function createHttpObject() {
+           try {return new XMLHttpRequest();}
+           catch (error) {}
+           try {return new ActiveXObject("Msxml2.XMLHTTP");}
+           catch (error) {}
+           try {return new ActiveXObject("Microsoft.XMLHTTP");}
+           catch (error) {}
+
+           throw new Error("Could not create HTTP request object.");
+    }
+
+    var request = new createHttpObject();
+    request.open("GET", window.location.href.replace("?issue=databaseInaccessible", "") + "/LoadDB", true);
+    request.send(null);
+    if (request.responseText == "Hello World!") {
+      main.innerHTML = `
+      <h1>openclassroom setup - Settings</h1>
+      <p>You're all done for now, during the testing phase! Make sure to reset the Database for every testing version, until the first release!
+      `;}
+      else {
+        main.innerHTML = `
+        <h1> FAILED TO SETUP DB</h1>
+        `;
+        main.innerHTML += "<P>" + request.responseText; + "</P>";
+        console.log(request.responseText);
+      }
+  }
+    main = document.getElementById("main");
+    main.innerHTML = `
+    <h1>openclassroom setup</h1>
+    <p><a onclick="LoadDB();return false;" href="https://hello.ca">Set up DATABASE</a>.</p>
+    `
+  </script>
