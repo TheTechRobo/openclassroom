@@ -61,6 +61,8 @@ async def GetPass(uname):
     user = uname
     userSettings = await r.db("openclassroom").table("userSettings").filter(r.row["user_stuff"] == user).run(conn)
     async for DEETA in userSettings: pass
+    try: DEETA
+    except UnboundLocalError: return ""
     if DEETA == userSettings: return "" #relies on disallowing blank passwords
     return DEETA['secret']
 # }}}
