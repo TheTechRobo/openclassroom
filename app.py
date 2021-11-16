@@ -12,6 +12,7 @@ style_used = "style.css"
 
 # hi {{{
 import flask_login
+from flask_login import login_required
 
 login_manager = flask_login.LoginManager()
 
@@ -37,6 +38,19 @@ async def request_loader(request):
     user = User()
     user.id = uname
     return user
+
+@login_required
+@app.route("/post", methods=["POST"])
+async def post():
+    try:
+        print(request.values['typee'], request.values["name"])
+    except KeyError: abort(400)
+    return request.values["typee"] + ";;" + request.values["name"]
+
+@login_required
+@app.route("/postAssignment")
+async def postAssignment():
+    return render_template('PostAssignment.html')
 
 @app.route('/login', methods=['GET','POST'])
 async def login():
